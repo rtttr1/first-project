@@ -37,8 +37,17 @@ stage
     다른 상태가 된다. 이를 인지하고 modified 상태가 되었다고 판단하며
     modified 된 상태는 tracked 상태지만 unstage 상태이다.
 
+
 stage에 올라와있는 상황을 영구적으로 저장: commit
     커밋을 하게 되면 "stage에 올라와있는 상태" 그대로 영구 저장된다.
+
+git commit -m "커밋 메시지"
+    커밋을 할 때 작성하고 싶은 메시지를 쌍따옴표 안쪽에 써준다
+    이때, commit은 stage에 올라와있는 상태가 영구적으로 저장된다!!!
+
+-a 옵션
+    git commit -am "커밋메시지"
+
 
 git status
     git 저장소의 상태를 확인해주는 명령어
@@ -50,3 +59,13 @@ git add 파일이름
 
     파일 이름 자리에 *을 사용하면 모든을 의미한다.
     (git add *)
+
+git 사용자 계정 정보 입력하기
+    git config --global user.name "닉네임"
+        닉네임 설정
+    git config --global user.email "이메일주소"
+        이메일 설정
+
+계정정보 확인하기
+    git config user.name
+    git config user.email
